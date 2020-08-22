@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour
   public Transform groundCheck;
   public float groundDistance = 0.4f;
   public LayerMask groundLayer;
-  private void Update()
+  
+  private void FixedUpdate()
   {
     float horizontalInput = Input.GetAxisRaw("Horizontal");
     float verticalInput = Input.GetAxisRaw("Vertical");
