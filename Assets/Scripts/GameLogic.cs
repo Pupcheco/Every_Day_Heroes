@@ -7,18 +7,14 @@ using UnityEngine.SceneManagement;
 using NaughtyAttributes;
 
 public class GameLogic : MonoBehaviour {
+    public static List<NPC> Followers = new List<NPC>();
 
-    [ReadOnly] public int FollowerCount;
+    [InfoBox("Are the NPCs snaking behind the player in a line? If not, they group behind the player instead.")]
+    public bool Snaking = false; 
 
     [BoxGroup("Input")]
     [InfoBox("Make sure these match the exact names from the Input Manager.")]
     [SerializeField] string _pauseButton;
-    
-    void Update() {
-        if (Input.GetButtonDown(_pauseButton)) {
-            Pause();
-        }
-    }
 
     public void Pause() {
         Time.timeScale = 0f;
@@ -32,5 +28,15 @@ public class GameLogic : MonoBehaviour {
 
     public void Quit() {
         Application.Quit();
+    }
+    
+    void Start() {
+        Followers.Clear();
+    }
+
+    void Update() {
+        if (Input.GetButtonDown(_pauseButton)) {
+            Pause();
+        }
     }
 }
