@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a674d5e89199f040a096ef1e89bf196, type: 3}
   m_Name: Prototype NPC
   m_EditorClassIdentifier: 
+  GameLogic: {fileID: 3149250958607004420, guid: 4ec999c1a222c5c45af7bc6b8d49bef9,
+    type: 3}
+  RepathInterval: 0.25
   FollowSpeed: 8
   WanderSpeed: 5
   WanderDistance: 5
   TimeBetweenWanderings: 1
+  StoppingDistance: 1
+  Acceleration: 8

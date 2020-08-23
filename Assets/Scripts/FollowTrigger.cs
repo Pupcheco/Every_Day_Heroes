@@ -5,6 +5,7 @@ using UnityEngine;
 public class FollowTrigger : MonoBehaviour {
     
     NPC _npc;
+    bool _following = false;
 
     void OnEnable() {
         _npc = this.GetComponentInParent<NPC>();
@@ -12,7 +13,14 @@ public class FollowTrigger : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         if (other.tag == "Player") {
-            _npc.FollowPlayer();
+            if (!_following) {
+                _npc.FollowPlayer();
+                _following = true;
+            } else {
+                var playerPosition = other.transform.position;
+                var direction = playerPosition - this.transform.position;
+                _npc.BackUp(direction);
+            }
         }
     }
 }

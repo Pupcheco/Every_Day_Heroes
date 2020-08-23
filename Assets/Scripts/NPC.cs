@@ -1,9 +1,11 @@
 ﻿#pragma warning disable 649
+#pragma warning disable 414
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using NaughtyAttributes;
 
 public class NPC : MonoBehaviour {
     
@@ -12,28 +14,69 @@ public class NPC : MonoBehaviour {
         Following,
     }
 
+
     [SerializeField] NPCData _npc;
 
-    GameLogic _gameLogic;
     NavMeshAgent _agent;
+    Rigidbody _rigidbody;
     NPCState _state = NPCState.Idle;
+    int _id;
     Transform _followTarget;
     Transform _wanderTarget;
     float _wanderTime = -10f;
-    float _timeBetweenRepaths = 0.5f;
     float _repathTime = -10f;
+    float _refollowTime = -10f;
+
+    public void FollowPlayer() {
+        _state = NPCState.Following;
+        _agent.speed = _npc.FollowSpeed;
+        _repathTime = Time.time + _npc.RepathInterval;
+
+        _id = GameLogic.Followers.Count;
+        GameLogic.Followers.Add(this);
+
+        if (_npc.GameLogic.Snaking && _id > 0) {
+            _followTarget = GameLogic.Followers[_id - 1].transform;
+        }
+        _agent.SetDestination(_followTarget.position);
+    }
+
+    public void BackUp(Vector3 direction) {
+        var newDirection = new Vector3(direction.x * -1f, 0f, direction.z * -1f);
+        _rigidbody.MovePosition(newDirection);
+        //_agent.destination = this.transform.position;
+        Debug.Log("follow target: " + _followTarget.position);
+        Debug.Log("new destination: " + _agent.destination);
+        _refollowTime = Time.time + 1.5f;
+    }
 
     void OnEnable() {
-        _gameLogic = GameObject.Find("Game Logic").GetComponent<GameLogic>();
         _agent = this.GetComponent<NavMeshAgent>();
-        _followTarget = GameObject.Find("FollowTarget").transform;
+        _rigidbody = this.GetComponent<Rigidbody>();
+
+        var transforms = GameObject.FindWithTag("Player").GetComponentsInChildren<Transform>();
+        foreach (var transform in transforms) {
+            if (transform.name == "FollowTarget") {
+                _followTarget = transform;
+                break;
+            }
+        }
+
+        _agent.acceleration = _npc.Acceleration;
+        _agent.stoppingDistance = _npc.StoppingDistance;
     }
 
     void Start() {
         // Create new WanderTarget for each agent, with the Game Logic object as its parent.
         var thisName = this.name + " WanderTarget";
         var target = new GameObject(thisName);
-        target.transform.parent = _gameLogic.transform;
+        GameObject targets;
+        if (GameObject.Find("WanderTargets") == null) {
+            targets = new GameObject("WanderTargets");
+        } else {
+            targets = GameObject.Find("WanderTargets");
+        }
+        target.transform.parent = targets.transform;
         _wanderTarget = target.transform;
         _agent.speed = _npc.WanderSpeed;
     }
@@ -56,17 +99,10 @@ public class NPC : MonoBehaviour {
             _wanderTime = Time.time + _npc.TimeBetweenWanderings;
         }
 
-        if (_state == NPCState.Following && Time.time > _repathTime) {
+        // Make sure the NPC regularly repaths towards the player.
+        if (_state == NPCState.Following && Time.time > _repathTime && Time.time > _refollowTime) {
             _agent.SetDestination(_followTarget.position);
-            _repathTime = Time.time + _timeBetweenRepaths;
+            _repathTime = Time.time + _npc.RepathInterval;
         }
-    }
-
-    public void FollowPlayer() {
-        _agent.SetDestination(_followTarget.position);
-        _state = NPCState.Following;
-        _agent.speed = _npc.FollowSpeed;
-        _repathTime = Time.time + _timeBetweenRepaths;
-        ++_gameLogic.FollowerCount;
     }
 }
