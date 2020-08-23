@@ -37,12 +37,12 @@ public class PhysicsPlayerController : MonoBehaviour
 
     currentSpeed = CalculateSpeed();
 
-    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * autoCorrectHeight, Color.blue);
+    Debug.DrawRay(transform.position, Vector3.down * autoCorrectHeight, Color.blue);
 
     //added layermask for those dealing with complex ground objects.
     if (Physics.Raycast(
             transform.position,
-            transform.TransformDirection(Vector3.down),
+            Vector3.down,
             out m_hit,
             autoCorrectHeight,
             groundLayerMask))
@@ -59,7 +59,8 @@ public class PhysicsPlayerController : MonoBehaviour
     rb.MovePosition(transform.position +
         Time.deltaTime *
         currentSpeed *
-        transform.TransformDirection(
+        //transform.TransformDirection(
+          new Vector3(
             moveHorizontal,
             0f,
             moveVertical));
