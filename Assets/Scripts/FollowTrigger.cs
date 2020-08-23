@@ -19,6 +19,7 @@ public class FollowTrigger : MonoBehaviour {
             } else {
                 var playerPosition = other.transform.position;
                 var direction = playerPosition - this.transform.position;
+                direction = this.transform.position - direction;
                 _npc.BackUp(direction);
             }
         }

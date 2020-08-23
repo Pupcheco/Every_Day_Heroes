@@ -7,14 +7,12 @@ using UnityEngine.SceneManagement;
 using NaughtyAttributes;
 
 public class GameLogic : MonoBehaviour {
-    public static List<NPC> Followers = new List<NPC>();
+    
 
-    [InfoBox("Are the NPCs snaking behind the player in a line? If not, they group behind the player instead.")]
-    public bool Snaking = false; 
+    [Required("Follower Manager prefab required."), SerializeField] GameObject _followerManager;
 
-    [BoxGroup("Input")]
     [InfoBox("Make sure these match the exact names from the Input Manager.")]
-    [SerializeField] string _pauseButton;
+    [BoxGroup("Input"), SerializeField] string _pauseButton;
 
     public void Resume() {
         SceneManager.UnloadSceneAsync("PauseMenu");
@@ -24,9 +22,12 @@ public class GameLogic : MonoBehaviour {
     public void Quit() {
         Application.Quit();
     }
-    
+
     void Start() {
-        Followers.Clear();
+        // Instantiate a Follower Manager object, but only if there isn't one already present in the scene.
+        if (GameObject.Find(_followerManager.name) == null) {
+            Instantiate(_followerManager, Vector3.zero, Quaternion.identity);
+        }
     }
 
     void Update() {
