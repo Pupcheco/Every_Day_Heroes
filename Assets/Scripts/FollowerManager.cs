@@ -11,12 +11,17 @@ public class FollowerManager : MonoBehaviour {
     public bool Snaking = false;
 
     public static void LoseFollowers(int count) {
-        for (var i = 0; i < count; ++i) {
-            var index = Random.Range(0, Followers.Count);
-            var x = Random.Range(0f, 25f);
-            var z = Random.Range(0f, 25f);
-            var impact = new Vector3(x, 300f, z);
-            Followers[index].Damage(impact);
+        if (Followers.Count > 0) {
+            count = Mathf.Clamp(count, 0, Followers.Count);
+
+            // Randomly pick which followers to lose and kill off.
+            for (var i = 0; i < count; ++i) {
+                var index = Random.Range(0, Followers.Count);
+                var x = Random.Range(15f, 40f);
+                var z = Random.Range(15f, 40f);
+                var impact = new Vector3(x, 300f, z);
+                Followers[index].Damage(impact);
+            }
         }
     }
 

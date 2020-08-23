@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7340584904364549673}
   - component: {fileID: 7340584904364549672}
   - component: {fileID: 7340584904364549685}
+  - component: {fileID: 2416449199312843133}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -112,7 +113,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &7340584904364549685
 MonoBehaviour:
@@ -121,7 +122,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7340584904364549675}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96515471f43b8c749b39a255ff280058, type: 3}
   m_Name: 
@@ -134,6 +135,25 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &2416449199312843133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340584904364549675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a142828ecbc4244bd690a059027760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 5
+  runSpeed: 8
+  playerJumpForce: 20000
+  appliedForceMode: 0
+  playerIsJumping: 0
+  currentSpeed: 0
+  FollowerSpeedDecay: 0.985
 --- !u!1 &7340584904880513467
 GameObject:
   m_ObjectHideFlags: 0
