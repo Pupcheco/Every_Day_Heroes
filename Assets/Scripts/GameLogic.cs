@@ -16,11 +16,6 @@ public class GameLogic : MonoBehaviour {
     [InfoBox("Make sure these match the exact names from the Input Manager.")]
     [SerializeField] string _pauseButton;
 
-    public void Pause() {
-        Time.timeScale = 0f;
-        SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
-    }
-
     public void Resume() {
         SceneManager.UnloadSceneAsync("PauseMenu");
         Time.timeScale = 1f;
@@ -36,7 +31,16 @@ public class GameLogic : MonoBehaviour {
 
     void Update() {
         if (Input.GetButtonDown(_pauseButton)) {
-            Pause();
+            if (!SceneManager.GetSceneByName("PauseMenu").isLoaded) {
+                Pause();
+            } else {
+                Resume();
+            }
         }
+    }
+
+    void Pause() {
+        Time.timeScale = 0f;
+        SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
     }
 }
