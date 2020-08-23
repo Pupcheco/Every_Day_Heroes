@@ -5,11 +5,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using DG.Tweening;
 using NaughtyAttributes;
 
 public class NPC : MonoBehaviour {
     
-    public enum NPCState {
+    public enum NpcState {
         Idle,
         Following,
         Dying,
@@ -20,7 +21,7 @@ public class NPC : MonoBehaviour {
 
     NavMeshAgent _agent;
     Rigidbody _rigidbody;
-    NPCState _state = NPCState.Idle;
+    NpcState _state = NpcState.Idle;
     int _id;
     Transform _followTarget;
     Transform _wanderTarget;
@@ -29,17 +30,26 @@ public class NPC : MonoBehaviour {
     float _refollowTime = -10f;
 
     public void FollowPlayer() {
-        _state = NPCState.Following;
+        _state = NpcState.Following;
         _agent.speed = _npc.FollowSpeed;
         _repathTime = Time.time + _npc.RepathInterval;
 
-        _id = GameLogic.Followers.Count;
-        GameLogic.Followers.Add(this);
+        _id = FollowerManager.Followers.Count;
+        FollowerManager.Followers.Add(this);
 
-        if (_npc.GameLogic.Snaking && _id > 0) {
-            _followTarget = GameLogic.Followers[_id - 1].transform;
+        if (_npc.FollowerManager.Snaking && _id > 0) {
+            _followTarget = FollowerManager.Followers[_id - 1].transform;
         }
         _agent.SetDestination(_followTarget.position);
+    }
+
+    public void Damage(Vector3 impact) {
+        FollowerManager.Followers.Remove(this);
+        _state = NpcState.Dying;
+        _agent.enabled = false;
+        _rigidbody.isKinematic = false;
+        _rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        _rigidbody.AddForce(impact, ForceMode.Impulse);
     }
 
     public void BackUp(Vector3 direction) {
@@ -64,13 +74,10 @@ public class NPC : MonoBehaviour {
     }
 
     void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.layer == 10 && _state != NPCState.Dying && 
+        if (collision.gameObject.layer == 10 && _state != NpcState.Dying && 
             collision.impulse.magnitude > _npc.MinImpulseToKill) {
-            _state = NPCState.Dying;
-            _agent.enabled = false;
-            _rigidbody.isKinematic = false;
-            _rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
-            _rigidbody.AddForce(collision.impulse, ForceMode.Impulse);
+
+            Damage(collision.impulse);
         }
     }
 
@@ -93,7 +100,7 @@ public class NPC : MonoBehaviour {
         // Wander if idle.
         if (_agent.enabled) {
             if (!_agent.pathPending && (_agent.remainingDistance <= _agent.stoppingDistance || !_agent.hasPath) &&
-                _state == NPCState.Idle && Time.time > _wanderTime) {
+                _state == NpcState.Idle && Time.time > _wanderTime) {
                 
                 // Find a random point on the NavMesh within the WanderDistance range to wander to.
                 for (var i = 0; i < 30; ++i) {
@@ -109,7 +116,7 @@ public class NPC : MonoBehaviour {
             }
 
             // Make sure the NPC regularly repaths towards the player.
-            if (_state == NPCState.Following && Time.time > _repathTime && Time.time > _refollowTime) {
+            if (_state == NpcState.Following && Time.time > _repathTime && Time.time > _refollowTime) {
                 _agent.SetDestination(_followTarget.position);
                 _repathTime = Time.time + _npc.RepathInterval;
             }

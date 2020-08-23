@@ -6,7 +6,7 @@ using NaughtyAttributes;
 [System.Serializable, CreateAssetMenu(menuName = "Every Day Heroes/NPC")]
 public class NPCData : ScriptableObject {
 
-    [Required("Game Logic Prefab required.")] public GameLogic GameLogic;
+    [Required("Follower Manager prefab required.")] public FollowerManager FollowerManager;
 
     [Space]
     [MinValue(0f), Tooltip("How hard the NPC has to be hit to kill them.")] public float MinImpulseToKill = 900f;
