@@ -90,7 +90,7 @@ new Vector3(0f, moveJumped * jumpSpeed, 0f) * Time.deltaTime, ForceMode.Force);
   // Calculate Player To Follower Speed Ratio
   private float CalculateSpeed()
   {
-    return speed * Mathf.Pow(followerToSpeedDecay, GameLogic.Followers.Count);
+    return speed * Mathf.Pow(followerToSpeedDecay, FollowerManager.Followers.Count);
   }
 }
 
