@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
   [Space] public float timeBetweenDamage = 0.5f;
 
+  [Header("Current Player Speed")] public Transform followPoint;
   public float FollowerSpeedDecay = 0.985f;
 
   private float _xAxis;
@@ -43,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
     // Find Player Jump Status 
     playerIsJumping = Input.GetButton("Jump");
 
+    //TODO (shaux): ROTATE FollowPoint around the player so that it is always behind the player depending on the move velocity
+    // Vector3 movement = new Vector3(_xAxis, 0.0f, _zAxis);
+    // followPoint.rotation = Quaternion.RotateTowards(movement);
+    // followPoint.Translate(movement * currentSpeed * Time.deltaTime, Space.World);
 
     // Disable Multiple Jumping
     Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * 10f, Color.blue);
@@ -54,8 +59,9 @@ public class PlayerMovement : MonoBehaviour
         _groundLocation = _hit.point;
       }
 
-      var distanceFromPlayerToGround = Vector3.Distance(transform.position, _groundLocation);
-      if (distanceFromPlayerToGround > 1f)
+      float distanceFromPlayerToGround = Vector3.Distance(transform.position, _groundLocation);
+      Debug.Log("dist" + distanceFromPlayerToGround);
+      if (distanceFromPlayerToGround > 1.2f)
         playerIsJumping = false;
     }
 
@@ -64,8 +70,7 @@ public class PlayerMovement : MonoBehaviour
   private void FixedUpdate()
   {
     //Move Player
-    _rb.MovePosition(transform.position + Time.deltaTime * currentSpeed *
-                     transform.TransformDirection(_xAxis, 0f, _zAxis));
+    _rb.MovePosition(transform.position + Time.deltaTime * currentSpeed * transform.TransformDirection(_xAxis, 0f, _zAxis));
 
     // Player Jump 
     if (playerIsJumping)
