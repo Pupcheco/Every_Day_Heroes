@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4190437190576275793}
   - component: {fileID: 4190437190576275805}
   - component: {fileID: 4190437190576275806}
-  - component: {fileID: 4190437190576275804}
+  - component: {fileID: 6524826193222835380}
   m_Layer: 11
   m_Name: Villain
   m_TagString: Untagged
@@ -65,8 +65,8 @@ MonoBehaviour:
   _target: {fileID: 0}
   _retargetStrength: 1000
   _explosion: {fileID: 0}
---- !u!136 &4190437190576275804
-CapsuleCollider:
+--- !u!135 &6524826193222835380
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -75,9 +75,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.25
-  m_Height: 1.25
-  m_Direction: 1
+  serializedVersion: 2
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4190437191317956664
 GameObject:
