@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 7396057986764546691}
   - component: {fileID: 5839981350597537062}
   - component: {fileID: 8570138233627040236}
+  - component: {fileID: 5170405979227341278}
   m_Layer: 0
   m_Name: Mesh_EDH_Building2
   m_TagString: Untagged
@@ -173,6 +174,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5170405979227341278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7921764816438097977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf958c41b838fd40a6338da4f1ff3c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shatteredPrefab: {fileID: 3453051858792374580, guid: ca01640197bac154f9d849b2bf2bd4ef,
+    type: 3}
+  _necessaryImpactSize: 10
 --- !u!1001 &194633095806325066
 PrefabInstance:
   m_ObjectHideFlags: 0
