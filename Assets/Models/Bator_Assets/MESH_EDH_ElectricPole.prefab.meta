@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Models/Bator_Assets/MESH_EDH_ElectricPole.prefab.meta
 guid: 38c283fa968e7394785506db8d005b39
+=======
+guid: 9a430cfae9824a540918fda95c293db0
+>>>>>>> 642a65eb6249b5fb1808e40d32c9d5e268b35a3a:Assets/Models/building assets/Building 4/Mesh_EDH_Building4.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
