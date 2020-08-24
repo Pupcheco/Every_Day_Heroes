@@ -1,13 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: a25329e4253cc264f91d2ffc33fc1879
-=======
 <<<<<<< HEAD:Assets/Models/Bator_Assets/MESH_EDH_Bench.prefab.meta
 guid: cd128b95ea735304abbb8d9e1896c614
 =======
 guid: a25329e4253cc264f91d2ffc33fc1879
 >>>>>>> 642a65eb6249b5fb1808e40d32c9d5e268b35a3a:Assets/Models/building assets/Building 1/Mesh_EDH_Building1_Variant1.prefab.meta
->>>>>>> 642a65eb6249b5fb1808e40d32c9d5e268b35a3a
 PrefabImporter:
   externalObjects: {}
   userData: 
