@@ -19,6 +19,7 @@ public class HPLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentHp = FollowerManager.Followers.Count;
         numberText.text = currentHp.ToString();
         slider.value = currentHp / ((float) maxHp);
     }
