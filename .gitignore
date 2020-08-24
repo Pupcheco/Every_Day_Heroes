@@ -15,19 +15,6 @@
 **/[Ee]xample[Aa]ssets/
 **/[Ee]xample[Ss]cenes/
 
-# FMOD
-/Assets/**/FMODStudioCache.asset
-/Assets/**/FMODStudioCache.asset.meta
-/Assets/Everyday_Heroes_Music/.cache
-fmod.log
-fmod_editor.log
-
-# Bolt
-/Assets/Ludiq/*/Generated/
-/Assets/Ludiq/*/Generated.meta
-!/Assets/Ludiq/*/Generated/Variables/Resources/
-!/Assets/Ludiq/*/Generated/Variables/Resources.meta
-
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
