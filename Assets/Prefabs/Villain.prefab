@@ -76,7 +76,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4190437191317956664
 GameObject:
@@ -106,8 +106,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children:
-  - {fileID: 8190372668314609114}
+  m_Children: []
   m_Father: {fileID: 4190437190576275793}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -173,108 +172,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f68d3c4ed585a4b9704321768f70a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &8478948462285149875
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 4190437191317956671}
-    m_Modifications:
-    - target: {fileID: 288593487966698362, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593489257313128, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_Name
-      value: villain trail particle effect 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593489257313129, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593489257313129, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593489257313129, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593489257313129, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593489257313129, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593489257313129, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593489257313129, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593489257313129, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593489257313129, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593489257313129, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593489257313129, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223671255187675270, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223671255187675270, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223671255187675270, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223671255187675270, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.w
-      value: 1e-45
-      objectReference: {fileID: 0}
-    - target: {fileID: 8846129277559947871, guid: 491ede270e104b4439252367d30fe7c4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.13
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 491ede270e104b4439252367d30fe7c4, type: 3}
---- !u!4 &8190372668314609114 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 288593489257313129, guid: 491ede270e104b4439252367d30fe7c4,
-    type: 3}
-  m_PrefabInstance: {fileID: 8478948462285149875}
-  m_PrefabAsset: {fileID: 0}
