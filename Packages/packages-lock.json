@@ -85,6 +85,13 @@
         "com.unity.modules.ui": "1.0.0"
       }
     },
+    "com.unity.uiextensions": {
+      "version": "https://github.com/JohannesDeml/unity-ui-extensions.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "93fda056a0590b1fba2ce3c0bb24b83be72da6e6"
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
