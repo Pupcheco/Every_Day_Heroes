@@ -1,0 +1,6 @@
+{b52805f9-1aa7-4f97-9198-a7251ef104b0} bank:/Master
+{2d35252d-6bdc-03d5-17d1-2ddbef020228} bank:/Master.strings
+{91b5ecfd-a1d4-47e3-b5d9-eb7533751c65} bank:/Music
+{2382f365-7866-4383-9df1-dba0878435a6} bus:/
+{8deb943d-e4fb-4ffd-9181-6417e931d8e6} bus:/Reverb
+{56fc8b5c-21b5-46f3-a112-e1c2e9132613} event:/Everyday_Heroes_Music
