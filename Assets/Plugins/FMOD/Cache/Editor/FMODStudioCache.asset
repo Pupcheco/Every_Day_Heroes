@@ -95,6 +95,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-4284037447998903884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Everyday_Heroes_Music
+  m_EditorClassIdentifier: 
+  Path: event:/Everyday_Heroes_Music
+  guid: 5c8bfc56b521f346a112e1c2e9132613
+  Banks:
+  - {fileID: 6690316780397779562}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 98429
 --- !u!114 &-3849165092536456082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,19 +262,42 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 2463984356037502202}
-  - {fileID: 3806149105253071092}
-  - {fileID: 1066010277965941040}
+  - {fileID: 9089502121002455554}
+  - {fileID: 1850041329467839147}
+  - {fileID: 6690316780397779562}
   EditorEvents:
-  - {fileID: 635001545363977783}
-  - {fileID: -6414849200323622129}
+  - {fileID: 9324732138509210}
+  - {fileID: -4284037447998903884}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 3806149105253071092}
+  - {fileID: 1850041329467839147}
   StringsBanks:
-  - {fileID: 2463984356037502202}
+  - {fileID: 9089502121002455554}
   stringsBankWriteTime: 637338221234145111
   cacheVersion: 3
+--- !u!114 &9324732138509210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flying_Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Flying_Sound
+  guid: 5b499fc126497e46bf838f8f28828438
+  Banks:
+  - {fileID: 1850041329467839147}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &635001545363977783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +376,24 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 794
+  Exists: 1
+--- !u!114 &1850041329467839147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Everyday_Heroes_Music/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637338599653122049
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &2082873516614723236
 MonoBehaviour:
@@ -560,6 +624,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &6690316780397779562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Everyday_Heroes_Music/Build/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637338162728296329
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &7817533800570505422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,3 +678,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &9089502121002455554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Everyday_Heroes_Music/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637338221234145111
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 848
+  Exists: 1
