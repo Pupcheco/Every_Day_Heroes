@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Everyday_Heroes_Music/Everyday_Heroes_Music.fspro
-  sourceBankPath: Everyday_Heroes_Music/Build
+  sourceProjectPath: Assets/Everyday_Heroes_Music/Everyday_Heroes_Music.fspro
+  sourceBankPath: Assets/Everyday_Heroes_Music/Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -76,7 +76,9 @@ MonoBehaviour:
   - Platform: 20
     Value: 32
   Plugins: []
-  MasterBanks: []
-  Banks: []
+  MasterBanks:
+  - Master
+  Banks:
+  - Music
   BanksToLoad: []
   LiveUpdatePort: 9264

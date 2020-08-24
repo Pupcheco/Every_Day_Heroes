@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{f45420c8-5889-44f7-88a1-fd04897f093e}">
+		<property name="assetPath">
+			<value>whoosh_air_swoosh_blast_01.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.498684807256236</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e032e06a-6fb1-47bb-bfc2-e0c0a753d05a}</destination>
+		</relationship>
+	</object>
+</objects>
