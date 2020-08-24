@@ -75,6 +75,12 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{a0d5b8b1-b38d-4489-89c4-47a2e80c0f25}">
+		<property name="volume">
+			<value>-4</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{56c0d0bc-6b8d-4627-9643-5cded0c83ec0}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{1207c008-0879-4a67-b335-ce1c0df21510}</destination>
 		</relationship>
@@ -111,6 +117,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{8c623a73-0f80-4053-ac7e-0cc0a592fac1}">
+		<property name="volume">
+			<value>-14.5</value>
+		</property>
 		<property name="name">
 			<value>flying sound</value>
 		</property>
@@ -140,6 +149,14 @@
 		<relationship name="markerTrack">
 			<destination>{1419479e-54e1-49bb-8b08-2f9f2fb2e7c8}</destination>
 		</relationship>
+	</object>
+	<object class="RandomizerModulator" id="{56c0d0bc-6b8d-4627-9643-5cded0c83ec0}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>16</value>
+		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{1207c008-0879-4a67-b335-ce1c0df21510}">
 		<relationship name="effects">
