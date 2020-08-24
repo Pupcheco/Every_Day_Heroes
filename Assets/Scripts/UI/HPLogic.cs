@@ -7,7 +7,7 @@ public class HPLogic : MonoBehaviour
     public UnityEngine.UI.Text numberText;
     public UnityEngine.UI.Slider slider;
 
-    public int currentHp;
+    private int currentHp;
     public int maxHp;
 
     // Start is called before the first frame update
