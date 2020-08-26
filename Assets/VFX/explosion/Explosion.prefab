@@ -28930,8 +28930,6 @@ GameObject:
   - component: {fileID: 2670021924585693830}
   - component: {fileID: 2670021924585693828}
   - component: {fileID: 2670021924585693829}
-  - component: {fileID: 296941424009201718}
-  - component: {fileID: 6662773362218203188}
   m_Layer: 0
   m_Name: beam light
   m_TagString: Untagged
@@ -33760,37 +33758,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &296941424009201718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2670021924585693831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1465209106, guid: c8d0ad23af520fe46aabe2b1fecf6462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"Beam Light","value":null,"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
---- !u!114 &6662773362218203188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2670021924585693831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -57143145, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: fa81d54ebd7f71242b5c4290f716bb9b, type: 2}
 --- !u!1 &2670021924902932536
 GameObject:
   m_ObjectHideFlags: 0
@@ -33869,12 +33836,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"Opacity","value":{"$content":0.0,"$type":"System.Single"},"$version":"A"},{"name":"IsExploding?","value":{"$content":false,"$type":"System.Boolean"},"$version":"A"},{"name":"Size","value":{"$content":0.0,"$type":"System.Single"},"$version":"A"},{"name":"Fire
-      Particle system","value":null,"$version":"A"},{"name":"explosion sphere","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"particle
-      systems","value":{"$content":[],"$type":"System.Collections.Generic.List`1[[UnityEngine.ParticleSystem,
-      UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"explosion sphere","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
-    - {fileID: 2434551560008241042, guid: 5605c2a0f105bfe45833fcb753750f85, type: 3}
+    - {fileID: 9110346252241571393}
 --- !u!1 &2670021924937708193
 GameObject:
   m_ObjectHideFlags: 0
@@ -53141,37 +53105,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &7708844288744814788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9110346252241571393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -57143145, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: fa81d54ebd7f71242b5c4290f716bb9b, type: 2}
---- !u!114 &8339860268977914371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9110346252241571393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1465209106, guid: c8d0ad23af520fe46aabe2b1fecf6462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
 --- !u!95 &6960097540712267050
 Animator:
   serializedVersion: 3
@@ -53198,6 +53131,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2670021923694412957}
     m_Modifications:
+    - target: {fileID: 2102416347405572749, guid: 5605c2a0f105bfe45833fcb753750f85,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2540817853737639666, guid: 6b24df7a4029ae647bddca954530240b,
+        type: 3}
     - target: {fileID: 2434551560008241042, guid: 5605c2a0f105bfe45833fcb753750f85,
         type: 3}
       propertyPath: m_Name
