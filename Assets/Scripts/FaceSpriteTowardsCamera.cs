@@ -20,7 +20,5 @@ public class FaceSpriteTowardsCamera : MonoBehaviour {
             var angle = Vector2.SignedAngle(Vector2.up, xyVelocity);
             this.transform.rotation = Quaternion.Euler(_camera.transform.rotation.eulerAngles.x, _camera.transform.rotation.eulerAngles.y, angle);
         }
-        // = Quaternion.AngleAxis(angle, Vector3.forward);
-        //Quaternion.RotateTowards(this.transform.rotation, Quaternion.AngleAxis(angle, Vector3.forward), 90f);
     }
 }

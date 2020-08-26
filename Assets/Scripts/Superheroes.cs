@@ -8,6 +8,9 @@ using Ludiq;
 
 public class Superheroes : MonoBehaviour {
     
+    static float _canExplodeTime = -10f;
+    const float _explosionLimitDuration = 0.25f;
+
     [SerializeField] Transform _target;
     [SerializeField] float _retargetStrength = 1000f;
     [SerializeField] GameObject _explosion;
@@ -19,7 +22,8 @@ public class Superheroes : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision) {
         var normal = collision.GetContact(0).normal;
-        if (collision.gameObject.layer == 11) {
+        if (collision.gameObject.layer == 11 && Time.time > _canExplodeTime) {
+            _canExplodeTime = Time.time + _explosionLimitDuration;
             CustomEvent.Trigger(_explosion, "Set Visible");
             _rigidbody.AddForce(normal * 100f, ForceMode.Impulse);
         } else if (collision.gameObject.layer == 31) {

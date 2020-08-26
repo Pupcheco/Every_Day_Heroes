@@ -16,18 +16,23 @@ public class NPC : MonoBehaviour {
         Dying,
     }
 
-
     [SerializeField] NPCData _npc;
 
     NavMeshAgent _agent;
+    Animator _animator;
+    SpriteRenderer _sprite;
     Rigidbody _rigidbody;
     NpcState _state = NpcState.Idle;
+    
     int _id;
+    
     Transform _followTarget;
     Transform _wanderTarget;
     float _wanderTime = -10f;
     float _repathTime = -10f;
     float _refollowTime = -10f;
+
+    Vector3 _previousPosition = new Vector3();
 
     public void FollowPlayer() {
         _state = NpcState.Following;
@@ -60,6 +65,8 @@ public class NPC : MonoBehaviour {
     void OnEnable() {
         _agent = this.GetComponent<NavMeshAgent>();
         _rigidbody = this.GetComponent<Rigidbody>();
+        _animator = this.GetComponentInChildren<Animator>();
+        _sprite = this.GetComponentInChildren<SpriteRenderer>();
 
         var transforms = GameObject.FindWithTag("Player").GetComponentsInChildren<Transform>();
         foreach (var transform in transforms) {
@@ -94,6 +101,8 @@ public class NPC : MonoBehaviour {
         target.transform.parent = targets.transform;
         _wanderTarget = target.transform;
         _agent.speed = _npc.WanderSpeed;
+
+        _previousPosition = this.transform.position;
     }
 
     void Update() {
@@ -121,5 +130,24 @@ public class NPC : MonoBehaviour {
                 _repathTime = Time.time + _npc.RepathInterval;
             }
         }
+    }
+
+    void FixedUpdate() {
+        var moveX = this.transform.position.x - _previousPosition.x;
+        var moveZ = this.transform.position.z - _previousPosition.z;
+
+        var moveSideways = false;
+        if (moveX < -0.15f || moveX > 0.15f) {
+        moveSideways = true;
+        }
+        if (moveX < -0.15f && moveSideways) {
+            _sprite.flipX = true;
+        } else {
+            _sprite.flipX = false;
+        }
+        _animator.SetBool("MoveSideways", moveSideways);
+        _animator.SetFloat("MoveZ", moveZ);
+
+        _previousPosition = this.transform.position;
     }
 }
