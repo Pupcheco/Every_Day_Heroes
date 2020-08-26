@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
   private float _xAxis;
   private float _zAxis;
   private Rigidbody _rb;
+  private Animator _animator;
+  private SpriteRenderer _sprite;
   private RaycastHit _hit;
   private Vector3 _groundLocation;
   private bool _isShiftPressedDown;
@@ -30,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
   private void Start()
   {
     _rb = GetComponent<Rigidbody>();
+    _animator = GetComponentInChildren<Animator>();
+    _sprite = GetComponentInChildren<SpriteRenderer>();
   }
 
   private void Update()
@@ -60,17 +64,34 @@ public class PlayerMovement : MonoBehaviour
       }
 
       float distanceFromPlayerToGround = Vector3.Distance(transform.position, _groundLocation);
-      Debug.Log("dist" + distanceFromPlayerToGround);
+      //Debug.Log("dist" + distanceFromPlayerToGround);
       if (distanceFromPlayerToGround > 1.2f)
         playerIsJumping = false;
     }
 
+    // Rotate player object (added by Rastal)
+    var moveInput = new Vector2(_xAxis, _zAxis);
+    var angle = Vector2.SignedAngle(Vector2.up, moveInput);
+    this.transform.rotation = Quaternion.Euler(0f, angle * -1, 0f);
+
+    // Animator stuff
+    var moveSideways = false;
+    if (_xAxis < -0.15f || _xAxis > 0.15f) {
+      moveSideways = true;
+    }
+    if (_xAxis < -0.15f && moveSideways) {
+      _sprite.flipX = true;
+    } else {
+      _sprite.flipX = false;
+    }
+    _animator.SetBool("MoveSideways", moveSideways);
+    _animator.SetFloat("MoveZ", _zAxis);
   }
 
   private void FixedUpdate()
   {
     //Move Player
-    _rb.MovePosition(transform.position + Time.deltaTime * currentSpeed * transform.TransformDirection(_xAxis, 0f, _zAxis));
+    _rb.MovePosition(transform.position + Time.deltaTime * currentSpeed * new Vector3(_xAxis, 0f, _zAxis));
 
     // Player Jump 
     if (playerIsJumping)
@@ -84,7 +105,8 @@ public class PlayerMovement : MonoBehaviour
 
   private void OnCollisionEnter(Collision collision)
   {
-    if (collision.gameObject.layer == 10 && Time.time > _nextDamageTime)
+    if (collision.gameObject.layer == 10 && Time.time > _nextDamageTime && 
+        collision.impulse.magnitude > 30f && FollowerManager.Followers.Count > 0)
     {
       var count = 1;  //TODO(Rastal): This actually needs to be calculated based on the impact.
       FollowerManager.LoseFollowers(count);
