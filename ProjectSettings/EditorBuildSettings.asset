@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SimpleAITest.unity
-    guid: b463c89c2f84ab445bec6b0e84412621
+    path: Assets/Scenes/LevelLayourPacheco.unity
+    guid: d6a73eeb8a863f44099d37ee741f2ede
   - enabled: 1
     path: Assets/Scenes/PauseMenu.unity
     guid: f8e79a0460414084ea3ba37205755f85
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 5d5a43a8079e0e74e9650d78ec7beb3c
   m_configObjects: {}
