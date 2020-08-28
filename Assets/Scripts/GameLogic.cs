@@ -10,6 +10,7 @@ public class GameLogic : MonoBehaviour {
     
 
     [Required("Follower Manager prefab required."), SerializeField] GameObject _followerManager;
+    [Required("Explosions prefab required."), SerializeField] GameObject _explosionsPrefab;
 
     [InfoBox("Make sure these match the exact names from the Input Manager.")]
     [BoxGroup("Input"), SerializeField] string _pauseButton;
@@ -27,6 +28,10 @@ public class GameLogic : MonoBehaviour {
         // Instantiate a Follower Manager object, but only if there isn't one already present in the scene.
         if (GameObject.Find(_followerManager.name) == null) {
             Instantiate(_followerManager, Vector3.zero, Quaternion.identity);
+        }
+        // Do the same for the Explosions object.
+        if (GameObject.Find(_explosionsPrefab.name) == null) {
+            Instantiate(_explosionsPrefab, Vector3.zero, Quaternion.identity);
         }
     }
 

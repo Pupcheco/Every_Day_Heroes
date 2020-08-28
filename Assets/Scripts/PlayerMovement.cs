@@ -71,8 +71,10 @@ public class PlayerMovement : MonoBehaviour
 
     // Rotate player object (added by Rastal)
     var moveInput = new Vector2(_xAxis, _zAxis);
-    var angle = Vector2.SignedAngle(Vector2.up, moveInput);
-    this.transform.rotation = Quaternion.Euler(0f, angle * -1, 0f);
+    if (moveInput.magnitude > 0.1f) {
+      var angle = Vector2.SignedAngle(Vector2.up, moveInput);
+      this.transform.rotation = Quaternion.Euler(0f, angle * -1, 0f);
+    }
 
     // Animator stuff
     var moveSideways = false;
