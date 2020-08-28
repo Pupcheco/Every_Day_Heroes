@@ -296,26 +296,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 288593487966698363, guid: e305d17c15fa1af4382d1727a0c4b772,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593487966698363, guid: e305d17c15fa1af4382d1727a0c4b772,
-        type: 3}
-      propertyPath: m_UseCustomVertexStreams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593487966698363, guid: e305d17c15fa1af4382d1727a0c4b772,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 288593487966698363, guid: e305d17c15fa1af4382d1727a0c4b772,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.data[2]
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 288593489257313128, guid: e305d17c15fa1af4382d1727a0c4b772,
         type: 3}
       propertyPath: m_Name
@@ -390,26 +370,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: -5.761806e-27
-      objectReference: {fileID: 0}
-    - target: {fileID: 3579711594377493226, guid: e305d17c15fa1af4382d1727a0c4b772,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3579711594377493226, guid: e305d17c15fa1af4382d1727a0c4b772,
-        type: 3}
-      propertyPath: m_UseCustomVertexStreams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3579711594377493226, guid: e305d17c15fa1af4382d1727a0c4b772,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3579711594377493226, guid: e305d17c15fa1af4382d1727a0c4b772,
-        type: 3}
-      propertyPath: m_VertexStreams.Array.data[2]
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8846129277559947871, guid: e305d17c15fa1af4382d1727a0c4b772,
         type: 3}
