@@ -295,7 +295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4629695}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetProps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20666,7 +20666,7 @@ GameObject:
   - component: {fileID: 565444928}
   - component: {fileID: 565444927}
   - component: {fileID: 565444926}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EdgeSidewalk (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22228,7 +22228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 608512893}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sidewalks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22821,7 +22821,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &640489990
@@ -39791,7 +39791,7 @@ GameObject:
   - component: {fileID: 1123639006}
   - component: {fileID: 1123639005}
   - component: {fileID: 1123639004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EdgeSidewalk (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44542,7 +44542,7 @@ GameObject:
   - component: {fileID: 1280722675}
   - component: {fileID: 1280722674}
   - component: {fileID: 1280722673}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetBlockFoundation (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51126,7 +51126,7 @@ GameObject:
   - component: {fileID: 1489781546}
   - component: {fileID: 1489781545}
   - component: {fileID: 1489781544}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EdgeSidewalk (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56657,7 +56657,7 @@ GameObject:
   - component: {fileID: 1642251804}
   - component: {fileID: 1642251803}
   - component: {fileID: 1642251802}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetBlockFoundation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57257,7 +57257,7 @@ GameObject:
   - component: {fileID: 1662884443}
   - component: {fileID: 1662884442}
   - component: {fileID: 1662884441}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EdgeSidewalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57943,7 +57943,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1696345462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetBlockFoundations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57980,7 +57980,7 @@ GameObject:
   - component: {fileID: 1698783677}
   - component: {fileID: 1698783676}
   - component: {fileID: 1698783675}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetBlockFoundation (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67352,7 +67352,7 @@ GameObject:
   - component: {fileID: 2002768361}
   - component: {fileID: 2002768360}
   - component: {fileID: 2002768359}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EdgeSidewalk (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68085,7 +68085,7 @@ GameObject:
   - component: {fileID: 2017980137}
   - component: {fileID: 2017980136}
   - component: {fileID: 2017980135}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EdgeSidewalk (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69864,7 +69864,7 @@ GameObject:
   - component: {fileID: 2074207629}
   - component: {fileID: 2074207628}
   - component: {fileID: 2074207627}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetBlockFoundation (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
