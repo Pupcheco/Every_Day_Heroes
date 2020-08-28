@@ -46,6 +46,10 @@ public class NPC : MonoBehaviour {
             _followTarget = FollowerManager.Followers[_id - 1].transform;
         }
         _agent.SetDestination(_followTarget.position);
+
+        if (_npc.FollowSound != "") {
+            FMODUnity.RuntimeManager.PlayOneShot(_npc.FollowSound, this.transform.position);
+        }
     }
 
     public void Damage(Vector3 impact) {

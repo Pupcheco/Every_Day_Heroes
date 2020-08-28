@@ -8,13 +8,18 @@ public class Explosions : MonoBehaviour {
     
     const int _explosionPoolCount = 10;
     [SerializeField] GameObject _explosionPrefab;
-    static Queue<GameObject> _explosions = new Queue<GameObject>();
+    [FMODUnity.EventRef, SerializeField] string _explosionSound = ""; 
+    Queue<GameObject> _explosions = new Queue<GameObject>();
 
-    public static void TriggerExplosion(Vector3 position) {
+    public void TriggerExplosion(Vector3 position) {
         var explosion = _explosions.Dequeue();
         explosion.transform.position = position;
         CustomEvent.Trigger(explosion, "Set Visible");
         _explosions.Enqueue(explosion);
+
+        if (_explosionSound != "") {
+            FMODUnity.RuntimeManager.PlayOneShot(_explosionSound, position);
+        }
     }
 
     void Start() {
