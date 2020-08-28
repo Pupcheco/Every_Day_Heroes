@@ -295,7 +295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4629695}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetProps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18802,7 +18802,7 @@ PrefabInstance:
     - target: {fileID: 7340584904364549684, guid: 441d4b1ca9659e44486cea77b27a9434,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.058406886
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7340584904364549684, guid: 441d4b1ca9659e44486cea77b27a9434,
         type: 3}
@@ -18812,7 +18812,7 @@ PrefabInstance:
     - target: {fileID: 7340584904364549684, guid: 441d4b1ca9659e44486cea77b27a9434,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.5388854
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7340584904364549684, guid: 441d4b1ca9659e44486cea77b27a9434,
         type: 3}
@@ -18853,21 +18853,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7340584904364549684, guid: 441d4b1ca9659e44486cea77b27a9434,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7340584904364549684, guid: 441d4b1ca9659e44486cea77b27a9434,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7340584904364549684, guid: 441d4b1ca9659e44486cea77b27a9434,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 441d4b1ca9659e44486cea77b27a9434, type: 3}
@@ -20681,7 +20666,7 @@ GameObject:
   - component: {fileID: 565444928}
   - component: {fileID: 565444927}
   - component: {fileID: 565444926}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EdgeSidewalk (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22243,7 +22228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 608512893}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sidewalks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22817,6 +22802,7 @@ GameObject:
   - component: {fileID: 640489991}
   - component: {fileID: 640489990}
   - component: {fileID: 640489989}
+  - component: {fileID: 640489993}
   m_Layer: 9
   m_Name: Floor
   m_TagString: Untagged
@@ -22899,6 +22885,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &640489993
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640489988}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &643434545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39789,7 +39791,7 @@ GameObject:
   - component: {fileID: 1123639006}
   - component: {fileID: 1123639005}
   - component: {fileID: 1123639004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EdgeSidewalk (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44540,7 +44542,7 @@ GameObject:
   - component: {fileID: 1280722675}
   - component: {fileID: 1280722674}
   - component: {fileID: 1280722673}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetBlockFoundation (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47504,8 +47506,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354745225}
-  m_LocalRotation: {x: 0.0041871164, y: 0.2625872, z: -0.0011394816, w: 0.9648985}
-  m_LocalPosition: {x: -5.7803698, y: 1.5, z: -6.394169}
+  m_LocalRotation: {x: 0.0054130913, y: 0.35928872, z: -0.002084061, w: 0.93320847}
+  m_LocalPosition: {x: -5.7803693, y: 1.5, z: -6.394169}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51124,7 +51126,7 @@ GameObject:
   - component: {fileID: 1489781546}
   - component: {fileID: 1489781545}
   - component: {fileID: 1489781544}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EdgeSidewalk (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53049,22 +53051,22 @@ PrefabInstance:
     - target: {fileID: 6948479725984646287, guid: 8f689414316a2ef4baf2ac2324dd0ea6,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0041871164
+      value: 0.0054130913
       objectReference: {fileID: 0}
     - target: {fileID: 6948479725984646287, guid: 8f689414316a2ef4baf2ac2324dd0ea6,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.2625872
+      value: 0.35928872
       objectReference: {fileID: 0}
     - target: {fileID: 6948479725984646287, guid: 8f689414316a2ef4baf2ac2324dd0ea6,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0011394816
+      value: -0.002084061
       objectReference: {fileID: 0}
     - target: {fileID: 6948479725984646287, guid: 8f689414316a2ef4baf2ac2324dd0ea6,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9648985
+      value: 0.93320847
       objectReference: {fileID: 0}
     - target: {fileID: 6948479725984646287, guid: 8f689414316a2ef4baf2ac2324dd0ea6,
         type: 3}
@@ -56655,7 +56657,7 @@ GameObject:
   - component: {fileID: 1642251804}
   - component: {fileID: 1642251803}
   - component: {fileID: 1642251802}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetBlockFoundation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57255,7 +57257,7 @@ GameObject:
   - component: {fileID: 1662884443}
   - component: {fileID: 1662884442}
   - component: {fileID: 1662884441}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EdgeSidewalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57941,7 +57943,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1696345462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetBlockFoundations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57978,7 +57980,7 @@ GameObject:
   - component: {fileID: 1698783677}
   - component: {fileID: 1698783676}
   - component: {fileID: 1698783675}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetBlockFoundation (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67350,7 +67352,7 @@ GameObject:
   - component: {fileID: 2002768361}
   - component: {fileID: 2002768360}
   - component: {fileID: 2002768359}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EdgeSidewalk (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68083,7 +68085,7 @@ GameObject:
   - component: {fileID: 2017980137}
   - component: {fileID: 2017980136}
   - component: {fileID: 2017980135}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EdgeSidewalk (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69862,7 +69864,7 @@ GameObject:
   - component: {fileID: 2074207629}
   - component: {fileID: 2074207628}
   - component: {fileID: 2074207627}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetBlockFoundation (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
