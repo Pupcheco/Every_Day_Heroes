@@ -13,7 +13,7 @@ public class Superheroes : MonoBehaviour {
 
     [SerializeField] Transform _target;
     [SerializeField] float _retargetStrength = 1000f;
-    [SerializeField] GameObject _explosion;
+    [SerializeField] Explosions _explosionsPrefab;
     Rigidbody _rigidbody;
 
     void OnEnable() {
@@ -24,7 +24,7 @@ public class Superheroes : MonoBehaviour {
         var normal = collision.GetContact(0).normal;
         if (collision.gameObject.layer == 11 && Time.time > _canExplodeTime) {
             _canExplodeTime = Time.time + _explosionLimitDuration;
-            Explosions.TriggerExplosion(this.transform.position);
+            _explosionsPrefab.TriggerExplosion(this.transform.position);
             _rigidbody.AddForce(normal * 100f, ForceMode.Impulse);
         } else if (collision.gameObject.layer == 31) {
             _rigidbody.AddForce(new Vector3(0f, -5f, 0f), ForceMode.Impulse);
