@@ -8,14 +8,24 @@ using NaughtyAttributes;
 
 public class GameLogic : MonoBehaviour {
     
+    [BoxGroup("Prefabs"), Required("Follower Manager prefab required."), SerializeField] GameObject _followerManager;
+    [BoxGroup("Prefabs"), Required("Explosions prefab required."), SerializeField] GameObject _explosionsPrefab;
+    [BoxGroup("Prefabs"), SerializeField] GameObject _uiPrefab;
 
-    [Required("Follower Manager prefab required."), SerializeField] GameObject _followerManager;
+    [BoxGroup("Scenes"), Scene, SerializeField] string _startMenu;
+    [BoxGroup("Scenes"), Scene, SerializeField] string _mainLevel;
+    [BoxGroup("Scenes"), Scene, SerializeField] string _pauseMenu;
 
     [InfoBox("Make sure these match the exact names from the Input Manager.")]
     [BoxGroup("Input"), SerializeField] string _pauseButton;
 
+    public void Play() {
+        SceneManager.LoadScene(_mainLevel);
+        SceneManager.UnloadSceneAsync(_startMenu);
+    }
+
     public void Resume() {
-        SceneManager.UnloadSceneAsync("PauseMenu");
+        SceneManager.UnloadSceneAsync(_pauseMenu);
         Time.timeScale = 1f;
     }
 
@@ -23,16 +33,13 @@ public class GameLogic : MonoBehaviour {
         Application.Quit();
     }
 
-    void Start() {
-        // Instantiate a Follower Manager object, but only if there isn't one already present in the scene.
-        if (GameObject.Find(_followerManager.name) == null) {
-            Instantiate(_followerManager, Vector3.zero, Quaternion.identity);
-        }
+    void Awake() {
+        DontDestroyOnLoad(this.gameObject);
     }
 
     void Update() {
         if (Input.GetButtonDown(_pauseButton)) {
-            if (!SceneManager.GetSceneByName("PauseMenu").isLoaded) {
+            if (!SceneManager.GetSceneByName(_pauseMenu).isLoaded) {
                 Pause();
             } else {
                 Resume();
@@ -42,6 +49,6 @@ public class GameLogic : MonoBehaviour {
 
     void Pause() {
         Time.timeScale = 0f;
-        SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene(_pauseMenu, LoadSceneMode.Additive);
     }
 }
