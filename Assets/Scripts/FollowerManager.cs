@@ -20,6 +20,10 @@ public class FollowerManager : MonoBehaviour {
         }
     }
 
+    public void DropOff() {
+        
+    }
+
     void Start() {
         Followers.Clear();
     }
