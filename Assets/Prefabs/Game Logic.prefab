@@ -47,4 +47,9 @@ MonoBehaviour:
     type: 3}
   _explosionsPrefab: {fileID: 485724291138913396, guid: 15dfd1f89a3efff4db6c1040f434472c,
     type: 3}
+  _uiPrefab: {fileID: 6106972475675487062, guid: 6f989fe916ec7d14cb4de758ec661036,
+    type: 3}
+  _startMenu: StartMenu
+  _mainLevel: LevelLayourPacheco
+  _pauseMenu: PauseMenu
   _pauseButton: Pause
