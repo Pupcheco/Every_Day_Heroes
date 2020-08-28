@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9153801042148969291}
   - component: {fileID: 1324572962186799811}
+  - component: {fileID: 2042478504171077014}
   m_Layer: 0
   m_Name: ShoppingSign
   m_TagString: Untagged
@@ -81,6 +82,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &2042478504171077014
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2721944916445187814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64, z: 0.2}
+  m_Center: {x: 0, y: -0.00000023841858, z: 0}
 --- !u!1 &7921764816438097977
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,6 +107,7 @@ GameObject:
   - component: {fileID: 5839981350597537062}
   - component: {fileID: 8570138233627040236}
   - component: {fileID: 5170405979227341278}
+  - component: {fileID: 3852678127158126372}
   m_Layer: 0
   m_Name: Mesh_EDH_Building2
   m_TagString: Untagged
@@ -189,6 +204,19 @@ MonoBehaviour:
   _shatteredPrefab: {fileID: 3453051858792374580, guid: ca01640197bac154f9d849b2bf2bd4ef,
     type: 3}
   _necessaryImpactSize: 10
+--- !u!65 &3852678127158126372
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7921764816438097977}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9761081, y: 1.6719605, z: 1.7548609}
+  m_Center: {x: -0.7253128, y: 0.82514066, z: -0.86066175}
 --- !u!1001 &194633095806325066
 PrefabInstance:
   m_ObjectHideFlags: 0
