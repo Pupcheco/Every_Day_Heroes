@@ -74,3 +74,9 @@ Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset.meta
 Assets/StreamingAssets/**/*.bank
 Assets/StreamingAssets/**/*.bank.meta
 fmod_editor.log
+
+#FMOD Studio
+Assets/Everyday_Heroes_Music/**.user
+Assets/Everyday_Heroes_Music/**.unsaved
+Assets/Everyday_Heroes_Music/**.cache
+Assets/Everyday_Heroes_Music/**.restore
