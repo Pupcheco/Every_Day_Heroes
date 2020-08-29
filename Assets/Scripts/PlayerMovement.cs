@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
 
   [Header("Current Player Speed")] public float currentSpeed;
 
-  [Space] public float timeBetweenDamage = 0.5f;
 
   [Header("Current Player Speed")] public Transform followPoint;
   public float FollowerSpeedDecay = 0.985f;
@@ -28,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
   private RaycastHit _hit;
   private Vector3 _groundLocation;
   private bool _isShiftPressedDown;
-  private float _nextDamageTime = -10f;
   private int jumpCounter = 0;
   private void Start()
   {
@@ -92,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
     {
       _sprite.flipX = true;
     }
-    else
+    else if (_xAxis > 0.15f && moveSideways)
     {
       _sprite.flipX = false;
     }
@@ -105,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
     //Move Player
     _rb.MovePosition(transform.position + Time.deltaTime * currentSpeed * new Vector3(_xAxis, 0f, _zAxis));
 
-    Debug.Log(jumpCounter);
+    //Debug.Log(jumpCounter);
     // Player Jump 
     if (playerIsJumping && jumpCounter == 0)
     {
@@ -121,14 +119,6 @@ public class PlayerMovement : MonoBehaviour
 
   private void OnCollisionEnter(Collision collision)
   {
-    if (collision.gameObject.layer == 10 && Time.time > _nextDamageTime &&
-        collision.impulse.magnitude > 30f && FollowerManager.Followers.Count > 0)
-    {
-      var count = 1;  //TODO(Rastal): This actually needs to be calculated based on the impact.
-      FollowerManager.LoseFollowers(count);
-      _nextDamageTime = Time.time + timeBetweenDamage;
-    }
-
     if (collision.gameObject.layer == 9 && jumpCounter != 0)
     {
       jumpCounter = 0;

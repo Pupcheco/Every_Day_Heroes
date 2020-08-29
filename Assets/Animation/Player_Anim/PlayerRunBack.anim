@@ -112,7 +112,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.33333334
-    functionName: 
+    functionName: PlayFootstepSound
     data: 
     objectReferenceParameter: {fileID: 7340584904364549675, guid: 441d4b1ca9659e44486cea77b27a9434,
       type: 3}
