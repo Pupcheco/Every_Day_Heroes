@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.00.00">
-	<object class="AudioFile" id="{137ec597-97ec-497c-9182-3baea3a38307}">
+	<object class="AudioFile" id="{f264b3af-158b-4625-b6bf-b339ef38418e}">
 		<property name="assetPath">
-			<value>Oh jeez.21.wav</value>
+			<value>MTV3_Yeah_Man.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.81691609977324264</value>
+			<value>1.2016326530612245</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{e032e06a-6fb1-47bb-bfc2-e0c0a753d05a}</destination>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.00.00">
-	<object class="AudioFile" id="{3c54614d-e075-4e88-b1ce-2887034624f6}">
+	<object class="AudioFile" id="{ad9bd7a2-1b2c-4c35-b20a-daa1052822eb}">
 		<property name="assetPath">
-			<value>Oh jeez.13.wav</value>
+			<value>Oh jeez.4.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.86619047619047618</value>
+			<value>1.0588208616780046</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{e032e06a-6fb1-47bb-bfc2-e0c0a753d05a}</destination>

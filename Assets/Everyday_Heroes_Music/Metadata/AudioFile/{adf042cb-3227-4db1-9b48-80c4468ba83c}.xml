@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.00.00">
-	<object class="AudioFile" id="{5227d086-88e0-47e0-bfcd-81e4c92ccc72}">
+	<object class="AudioFile" id="{adf042cb-3227-4db1-9b48-80c4468ba83c}">
 		<property name="assetPath">
-			<value>Oh jeez.4.wav</value>
+			<value>ZOOM0012.3.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.0588208616780046</value>
+			<value>0.88750566893424032</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{e032e06a-6fb1-47bb-bfc2-e0c0a753d05a}</destination>

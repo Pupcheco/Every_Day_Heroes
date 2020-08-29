@@ -50289,7 +50289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   postProcessLayer: {fileID: 1458697437}
-  lightMeter: 1
+  lightMeter: 0
   histogram: 0
   waveform: 0
   vectorscope: 0
