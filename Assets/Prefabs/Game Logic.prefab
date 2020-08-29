@@ -52,4 +52,10 @@ MonoBehaviour:
   _startMenu: StartMenu
   _mainLevel: LevelLayourPacheco
   _pauseMenu: PauseMenu
+  _gameOver: GameOver
+  _gameOverScore: {fileID: 7115549922777682791, guid: b3389ffc225b6e641a436c189cecea21,
+    type: 3}
+  _gameOverHighScore: {fileID: 8702376948821649659, guid: 22d2e6c135fc09744bdbec2ce5ad3309,
+    type: 3}
+  _startMenuHighScore: {fileID: 0}
   _pauseButton: Pause
