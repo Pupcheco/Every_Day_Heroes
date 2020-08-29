@@ -7,6 +7,7 @@ using NaughtyAttributes;
 public class NPCData : ScriptableObject {
 
     [Required("Follower Manager prefab required.")] public FollowerManager FollowerManager;
+    [FMODUnity.EventRef] public string FollowSound = "";
 
     [Space]
     [MinValue(0f), Tooltip("How hard the NPC has to be hit to kill them.")] public float MinImpulseToKill = 900f;

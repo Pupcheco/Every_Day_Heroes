@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2677221227164275604}
   - component: {fileID: 199163115711227742}
   - component: {fileID: -8948118543127049015}
+  - component: {fileID: 5335096412074046604}
   m_Layer: 0
   m_Name: Mesh_EDH_Building4
   m_TagString: Untagged
@@ -107,6 +108,19 @@ MonoBehaviour:
   _shatteredPrefab: {fileID: 4808268461723194662, guid: 627cf977085ab8e4998aac5f7b9be107,
     type: 3}
   _necessaryImpactSize: 10
+--- !u!65 &5335096412074046604
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856448127154538123}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9821851, y: 3.63, z: 2.1}
+  m_Center: {x: -0.7213845, y: 1.8, z: -0.94}
 --- !u!1 &2486226307870836725
 GameObject:
   m_ObjectHideFlags: 0
