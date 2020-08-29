@@ -11,6 +11,8 @@ public class GameLogic : MonoBehaviour {
     
     const string _highScorePrefsString = "HighScore";
 
+    [SerializeField] bool _gameOverDebug = false;
+
     [BoxGroup("Prefabs"), Required("Follower Manager prefab required."), SerializeField] GameObject _followerManager;
     [BoxGroup("Prefabs"), Required("Explosions prefab required."), SerializeField] GameObject _explosionsPrefab;
     [BoxGroup("Prefabs"), SerializeField] GameObject _uiPrefab;
@@ -30,23 +32,12 @@ public class GameLogic : MonoBehaviour {
     int _score = 0;
     int _highScore;
 
-    [ShowNonSerializedField] int GAME_OVERED;
+    [ShowNonSerializedField] int _gameOverTested;
 
     public void Play() {
         _score = 0;
-        /*if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName(_startMenu)) {
-            SceneManager.UnloadSceneAsync(_startMenu);
-        }
-        if (SceneManager.GetSceneByName(_mainLevel).isLoaded) {
-            SceneManager.UnloadSceneAsync(_mainLevel);
-        }
-        if (SceneManager.GetSceneByName(_gameOver).isLoaded) {
-            SceneManager.UnloadSceneAsync(_gameOver);
-        }
-        */
         SceneManager.LoadSceneAsync(_mainLevel, LoadSceneMode.Single);
         Time.timeScale = 1f;
-        ++GAME_OVERED;
     }
 
     public void Resume() {
@@ -79,8 +70,8 @@ public class GameLogic : MonoBehaviour {
     }
 
     void Update() {
-        if (GAME_OVERED == 0) {
-            ++GAME_OVERED;
+        if (_gameOverTested == 0 && _gameOverDebug) {
+            ++_gameOverTested;
         }
         if (Input.GetButtonDown(_pauseButton)) {
             if (SceneManager.GetSceneByName(_pauseMenu).isLoaded) {
@@ -89,9 +80,9 @@ public class GameLogic : MonoBehaviour {
                 Pause();
             }
         }
-        if (Time.time > 3f && GAME_OVERED == 1) {
+        if (Time.time > 3f && _gameOverTested == 1 && _gameOverDebug) {
             GameOver();
-            ++GAME_OVERED;
+            ++_gameOverTested;
         }
     }
 
