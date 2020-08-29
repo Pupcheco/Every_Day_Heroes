@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
     {
       _sprite.flipX = true;
     }
-    else
+    else if (_xAxis > 0.15f && moveSideways)
     {
       _sprite.flipX = false;
     }
