@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6915727077640010562}
+  - component: {fileID: 4093767863946453238}
   m_Layer: 0
   m_Name: MESH_EDH_Car_Roadblock
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -20.132002, z: 0}
+--- !u!65 &4093767863946453238
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103021320498848248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 159.8, y: 45, z: 46.94}
+  m_Center: {x: 0, y: 19.26, z: 19.25}
 --- !u!1 &7436893679216714052
 GameObject:
   m_ObjectHideFlags: 0

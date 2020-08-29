@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 961371087821223366}
+  - component: {fileID: 3943873554471529926}
   m_Layer: 0
   m_Name: MESH_EDH_ElectricPole
   m_TagString: Untagged
@@ -41,6 +42,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &3943873554471529926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440412980352020348}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0, y: 73.3, z: 71.1}
+  m_Center: {x: 0, y: 239.2, z: 0}
 --- !u!1 &3641857517338323046
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +698,7 @@ GameObject:
   - component: {fileID: 3172263565796714681}
   - component: {fileID: 1000229220405495789}
   - component: {fileID: 6318329206666453228}
+  - component: {fileID: 4477962498996782439}
   m_Layer: 0
   m_Name: MESH_EDH_ElectricPole_01_MESH_EDH_ElectricPole_GRP
   m_TagString: Untagged
@@ -752,6 +767,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4477962498996782439
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029116438839555871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 34.85, y: 274.3224, z: 6.0104933}
+  m_Center: {x: 0, y: 137.1612, z: 0.51297414}
 --- !u!1001 &1078980916262068783
 PrefabInstance:
   m_ObjectHideFlags: 0
