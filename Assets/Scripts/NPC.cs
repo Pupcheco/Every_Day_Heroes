@@ -61,6 +61,11 @@ public class NPC : MonoBehaviour {
         _rigidbody.AddForce(impact, ForceMode.Impulse);
     }
 
+    public void DropOff() {
+        // Play sound / particle effect
+        // Slip NPC back into pool
+    }
+
     public void BackUp(Vector3 direction) {
         _rigidbody.MovePosition(direction);
         _refollowTime = Time.time + 1.5f;
