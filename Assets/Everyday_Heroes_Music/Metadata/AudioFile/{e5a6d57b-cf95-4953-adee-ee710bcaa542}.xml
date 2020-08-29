@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{e5a6d57b-cf95-4953-adee-ee710bcaa542}">
+		<property name="assetPath">
+			<value>HUMAN VOICE SCREAM WOO HOO 01.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.966530612244898</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e032e06a-6fb1-47bb-bfc2-e0c0a753d05a}</destination>
+		</relationship>
+	</object>
+</objects>
