@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{df5d29bf-31c0-43ef-a001-c241ac4013c1}">
+		<property name="assetPath">
+			<value>thank you dear.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.554172335600907</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e032e06a-6fb1-47bb-bfc2-e0c0a753d05a}</destination>
+		</relationship>
+	</object>
+</objects>
