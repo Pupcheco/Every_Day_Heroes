@@ -229,6 +229,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _npc: {fileID: 11400000, guid: c4930d1abeccbe447bab734351901cd6, type: 2}
+  _spawner: {fileID: 6637284894571133405, guid: f4d4e9a766a85cb4a84835cae94d6a21,
+    type: 3}
+  _followParticleObject: {fileID: 0}
+  _followParticleBoltEventName: 
+  _dropOffParticleObject: {fileID: 0}
+  _dropOffParticleBoltEventName: 
 --- !u!1 &8711804763652693431
 GameObject:
   m_ObjectHideFlags: 0
