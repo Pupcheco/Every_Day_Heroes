@@ -7,7 +7,7 @@ public class SavedLogic : MonoBehaviour
     public UnityEngine.UI.Text numberShadowText;
     public UnityEngine.UI.Text numberText;
 
-    public int savedCount;
+    public GameLogic gameLogic;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class SavedLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var text = savedCount.ToString();
+        var text = gameLogic.Score.ToString();
         numberShadowText.text = text;
         numberText.text = text;    
     }

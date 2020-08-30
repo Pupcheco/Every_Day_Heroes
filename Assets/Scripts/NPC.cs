@@ -98,7 +98,6 @@ public class NPC : MonoBehaviour {
         _rigidbody = this.GetComponent<Rigidbody>();
         _animator = this.GetComponentInChildren<Animator>();
         _sprite = this.GetComponentInChildren<SpriteRenderer>();
-        //_spawner = GameObject.Find("NPCSpawner").GetComponent<NpcSpawner>();
 
         var transforms = GameObject.FindWithTag("Player").GetComponentsInChildren<Transform>();
         foreach (var transform in transforms) {
@@ -164,7 +163,7 @@ public class NPC : MonoBehaviour {
         }
     }
 
-    void FixedUpdate() {
+    void LateUpdate() {
         var moveX = this.transform.position.x - _previousPosition.x;
         var moveZ = this.transform.position.z - _previousPosition.z;
 
