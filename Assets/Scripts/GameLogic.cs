@@ -28,7 +28,7 @@ public class GameLogic : MonoBehaviour {
 
     [BoxGroup("Input"), SerializeField, InputAxis] string _pauseButton;
 
-    int _score = 0;
+    [ShowNonSerializedField] int _score = 0;
     int _highScore;
 
     [ShowNonSerializedField] int _gameOverTested;
