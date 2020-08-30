@@ -5,6 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Bolt;
+using NaughtyAttributes;
 
 public class NPC : MonoBehaviour {
     
@@ -15,7 +17,18 @@ public class NPC : MonoBehaviour {
     }
 
     [SerializeField] NPCData _npc;
+    
+    [InfoBox("Make sure the Bolt Event Names exactly match the custom event names in their Bolt scripts.")]
 
+    [BoxGroup("Follow"), FMODUnity.EventRef, SerializeField] string _followSound = "";
+    [BoxGroup("Follow"), SerializeField] GameObject _followParticleObject;
+    [BoxGroup("Follow"), SerializeField] string _followParticleBoltEventName = "";
+
+    [BoxGroup("Drop Off"), FMODUnity.EventRef, SerializeField] string _dropOffSound = "";
+    [BoxGroup("Drop Off"), SerializeField] GameObject _dropOffParticleObject;
+    [BoxGroup("Drop Off"), SerializeField] string _dropOffParticleBoltEventName = "";
+
+    [SerializeField] NpcSpawner _spawner;
     NavMeshAgent _agent;
     Animator _animator;
     SpriteRenderer _sprite;
@@ -45,7 +58,10 @@ public class NPC : MonoBehaviour {
         }
         _agent.SetDestination(_followTarget.position);
 
-        if (_npc.FollowSound != "") {
+        if (_followParticleObject != null && _followParticleBoltEventName != "") {
+            CustomEvent.Trigger(_followParticleObject, _followParticleBoltEventName);
+        }
+        if (_followSound != "") {
             FMODUnity.RuntimeManager.PlayOneShot(_npc.FollowSound, this.transform.position);
         }
     }
@@ -60,8 +76,16 @@ public class NPC : MonoBehaviour {
     }
 
     public void DropOff() {
-        // Play sound / particle effect
-        // Slip NPC back into pool
+        _spawner.Enqueue(this.gameObject);
+
+        if (_dropOffParticleObject != null && _dropOffParticleBoltEventName != "") {
+            CustomEvent.Trigger(_dropOffParticleObject, _dropOffParticleBoltEventName);
+        }
+        if (_dropOffSound != "") {
+            FMODUnity.RuntimeManager.PlayOneShot(_dropOffSound, this.transform.position);
+        }
+
+        this.gameObject.SetActive(false);
     }
 
     public void BackUp(Vector3 direction) {
@@ -74,6 +98,7 @@ public class NPC : MonoBehaviour {
         _rigidbody = this.GetComponent<Rigidbody>();
         _animator = this.GetComponentInChildren<Animator>();
         _sprite = this.GetComponentInChildren<SpriteRenderer>();
+        //_spawner = GameObject.Find("NPCSpawner").GetComponent<NpcSpawner>();
 
         var transforms = GameObject.FindWithTag("Player").GetComponentsInChildren<Transform>();
         foreach (var transform in transforms) {

@@ -30,6 +30,10 @@ public class NpcSpawner : MonoBehaviour {
         }
     }
 
+    public void Enqueue(GameObject npc) {
+        _npcQueue.Enqueue(npc);
+    }
+
     void Start() {
         for (var i = 0; i < _spawnQueueCount; ++i) {
             var index = Random.Range(0, _npcPrefabs.Count);
