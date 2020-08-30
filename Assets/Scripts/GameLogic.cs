@@ -26,8 +26,7 @@ public class GameLogic : MonoBehaviour {
     [BoxGroup("UI"), SerializeField] TextMeshProUGUI _gameOverHighScore;
     [BoxGroup("UI"), SerializeField] TextMeshProUGUI _startMenuHighScore;
 
-    [InfoBox("Make sure these match the exact names from the Input Manager.")]
-    [BoxGroup("Input"), SerializeField] string _pauseButton;
+    [BoxGroup("Input"), SerializeField, InputAxis] string _pauseButton;
 
     int _score = 0;
     int _highScore;
@@ -65,7 +64,7 @@ public class GameLogic : MonoBehaviour {
     }
 
     void Awake() {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         _highScore = PlayerPrefs.GetInt("HighScore", 0);
     }
 
