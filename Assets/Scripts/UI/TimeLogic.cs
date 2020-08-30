@@ -6,22 +6,26 @@ public class TimeLogic : MonoBehaviour
 {
     public UnityEngine.UI.Text numberShadowText;
     public UnityEngine.UI.Text numberText;
+    
+    void Update() {
+        var minutes = (int)(Time.time / 60);
+        var minutesText = "";
+        if (minutes < 10) {
+            minutesText = "0" + minutes.ToString();
+        } else {
+            minutesText = minutes.ToString();
+        }
 
-    public int secondsLeft;
-
-    // Start is called before the first frame update
-    void Start()
-    {
+        var seconds = (int)(Time.time % 60);
+        var secondsText = "";
+        if (seconds < 10) {
+            secondsText = "0" + seconds.ToString();
+        } else {
+            secondsText = seconds.ToString();
+        }
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        var minutes = secondsLeft / 60;
-        var seconds = secondsLeft % 60;
-        var text = minutes.ToString()  + ":" + seconds.ToString();
+        var text = minutesText + ":" + secondsText;
         numberShadowText.text = text;    
-        numberText.text = text;    
+        numberText.text = text;
     }
 }

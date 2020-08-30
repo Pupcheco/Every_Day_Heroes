@@ -10,6 +10,8 @@ using TMPro;
 public class GameLogic : MonoBehaviour {
     
     const string _highScorePrefsString = "HighScore";
+    
+    public int Score = 0;
 
     [SerializeField] bool _gameOverDebug = false;
 
@@ -28,13 +30,12 @@ public class GameLogic : MonoBehaviour {
 
     [BoxGroup("Input"), SerializeField, InputAxis] string _pauseButton;
 
-    [ShowNonSerializedField] int _score = 0;
     int _highScore;
 
     [ShowNonSerializedField] int _gameOverTested;
 
     public void Play() {
-        _score = 0;
+        Score = 0;
         SceneManager.LoadSceneAsync(_mainLevel, LoadSceneMode.Single);
         Time.timeScale = 1f;
     }
@@ -47,11 +48,11 @@ public class GameLogic : MonoBehaviour {
     public void GameOver() {
         Time.timeScale = 0.001f;
         SceneManager.LoadScene(_gameOver, LoadSceneMode.Additive);
-        if (_score >= _highScore) {
-            _highScore = _score;
+        if (Score >= _highScore) {
+            _highScore = Score;
             PlayerPrefs.SetInt(_highScorePrefsString, _highScore);
         }
-        _gameOverScore.text = _score.ToString();
+        _gameOverScore.text = Score.ToString();
         _gameOverHighScore.text = _highScore.ToString();
     }
 
@@ -60,11 +61,10 @@ public class GameLogic : MonoBehaviour {
     }
 
     public void AddScore(int count) {
-        _score += count;
+        Score += count;
     }
 
     void Awake() {
-        //DontDestroyOnLoad(this.gameObject);
         _highScore = PlayerPrefs.GetInt("HighScore", 0);
     }
 
