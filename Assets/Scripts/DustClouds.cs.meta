@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 20c988f64e65b4045b7f51189d9ff0f6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _dustCloudPrefab: {fileID: 5234878128481328158, guid: 93eae22e6fa266940a9073fdbfe0b3ac,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
