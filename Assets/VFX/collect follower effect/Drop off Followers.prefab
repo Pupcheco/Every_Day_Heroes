@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9078893581616640403}
-  - component: {fileID: -6716388950764157247}
-  - component: {fileID: 7874607921700664612}
+  - component: {fileID: -7212638749720497881}
+  - component: {fileID: -4459681255111144826}
   m_Layer: 0
-  m_Name: collect follower effect
+  m_Name: Drop off Followers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-6716388950764157247
+--- !u!114 &-7212638749720497881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50,7 +50,7 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
---- !u!114 &7874607921700664612
+--- !u!114 &-4459681255111144826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
   _data:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 11400000, guid: 5fcefcf1df5724543a65a86d2d853c69, type: 2}
+    - {fileID: 11400000, guid: 5edafe8113d39634d99156d688471df4, type: 2}
 --- !u!1 &6242004490720962763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,8 +1428,8 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 0}
-        key1: {r: 1, g: 0.9568609, b: 0, a: 1}
-        key2: {r: 1, g: 0.19607842, b: 0.22890073, a: 1}
+        key1: {r: 0, g: 1, b: 1, a: 1}
+        key2: {r: 0.19607842, g: 0.34393772, b: 1, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -3888,7 +3888,7 @@ ParticleSystem:
   LightsModule:
     enabled: 1
     ratio: 1
-    light: {fileID: 3694201100797511886, guid: af7b2ad3b6ff3ee4ea863a02d8d8e93e, type: 3}
+    light: {fileID: 3694201100797511886, guid: ccef6755d301aeb448bcf8526ca8a552, type: 3}
     randomDistribution: 1
     color: 1
     range: 1
@@ -6249,8 +6249,8 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 0}
-        key1: {r: 1, g: 0.9568609, b: 0, a: 1}
-        key2: {r: 1, g: 0.48426872, b: 0.19607842, a: 1}
+        key1: {r: 0, g: 0.9906864, b: 1, a: 1}
+        key2: {r: 0.19607842, g: 0.45446584, b: 1, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -11070,8 +11070,8 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 0}
-        key1: {r: 1, g: 0.9568609, b: 0, a: 1}
-        key2: {r: 1, g: 0.48426872, b: 0.19607842, a: 1}
+        key1: {r: 0, g: 0.9906864, b: 1, a: 1}
+        key2: {r: 0.19607842, g: 0.45446584, b: 1, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
