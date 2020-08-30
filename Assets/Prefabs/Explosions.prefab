@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _explosionPrefab: {fileID: 2670021924902932536, guid: 99bb463697cb46c46885a8034d76fd4c,
     type: 3}
+  _explosionSound: event:/Explosion_1

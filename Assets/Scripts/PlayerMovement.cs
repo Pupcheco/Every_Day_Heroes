@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     if (moveInput.magnitude > 0.1f)
     {
       var angle = Vector2.SignedAngle(Vector2.up, moveInput);
-      this.transform.rotation = Quaternion.Euler(0f, angle * 1, 0f);
+      this.transform.rotation = Quaternion.Euler(0f, angle * -1, 0f);
     }
 
     // Animator stuff
