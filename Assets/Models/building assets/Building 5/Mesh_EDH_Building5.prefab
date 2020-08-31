@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8981226347916111953}
   - component: {fileID: -597553294228952319}
   - component: {fileID: 3373101114855392962}
+  - component: {fileID: 2094695223828025359}
+  - component: {fileID: 975523811068172766}
   m_Layer: 0
   m_Name: Mesh_EDH_Building5
   m_TagString: Untagged
@@ -101,6 +103,7 @@ MonoBehaviour:
   _shatteredPrefab: {fileID: 5429103697543704977, guid: a580fcff0022ff5488b5445c24b5286a,
     type: 3}
   _necessaryImpactSize: 10
+  _destructionSound: 
 --- !u!65 &3373101114855392962
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -114,6 +117,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9319793, y: 1.8115609, z: 1.7515782}
   m_Center: {x: -0.69962883, y: 0.90578043, z: -0.83246756}
+--- !u!114 &2094695223828025359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7467889260805525892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1465209106, guid: c8d0ad23af520fe46aabe2b1fecf6462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
+--- !u!114 &975523811068172766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7467889260805525892}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -57143145, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: 639472818b3da2c408aad180dd8cbf73, type: 2}
 --- !u!1001 &207279782664955884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -392,6 +426,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 12b3059c23bb37042b395aa7a08df6b0, type: 2}
+    - target: {fileID: 8470741754228928694, guid: e99cc9bfe0de5564b913427f494497e1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e99cc9bfe0de5564b913427f494497e1, type: 3}
 --- !u!4 &1664986548215107203 stripped
