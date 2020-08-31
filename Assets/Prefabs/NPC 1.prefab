@@ -233,7 +233,7 @@ MonoBehaviour:
   _npc: {fileID: 11400000, guid: c4930d1abeccbe447bab734351901cd6, type: 2}
   _followSound: 
   _followParticleObject: {fileID: 4699215377702269479}
-  _followParticleBoltEventName: Collect Follower
+  _followParticleBoltEventName: Collect
   _dropOffSound: 
   _dropOffParticleObject: {fileID: 527937025067987412}
   _dropOffParticleBoltEventName: Drop Off Followers
